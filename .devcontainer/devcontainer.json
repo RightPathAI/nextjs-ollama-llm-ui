@@ -1,0 +1,30 @@
+{
+    "name": "nextjs-ollama-codespaces",
+    // "image": "mcr.microsoft.com/devcontainers/javascript-node",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations" : {
+        "vscode": {
+            "extensions": [
+                "eamodio.gitlens",
+                "github.copilot",
+                "github.copilot-chat",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    // "runArgs": ["--init", "--privileged"],
+    // "overrideCommand": false,
+    // "features": {
+    //     "ghcr.io/devcontainers-contrib/features/jshint:2": {},
+    //     "docker-in-docker": {
+    //         "version": "latest",
+    //         "moby": true,
+    //         "dockerDashComposeVersion": "v1"
+    //     }
+    // },
+    "postCreateCommand": "/bin/bash ./.devcontainer/post-install.sh",
+    "postAttachCommand": "/bin/bash ./.devcontainer/post-attach.sh"
+ }
