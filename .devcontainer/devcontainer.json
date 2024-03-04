@@ -11,7 +11,8 @@
                 "eamodio.gitlens",
                 "github.copilot",
                 "github.copilot-chat",
-                "ms-azuretools.vscode-docker"
+                "ms-azuretools.vscode-docker",
+                "ms-vscode-remote.remote-containers"
             ]
         }
     },
@@ -26,5 +27,6 @@
     //     }
     // },
     "postCreateCommand": "/bin/bash ./.devcontainer/post-install.sh",
-    "postAttachCommand": "/bin/bash ./.devcontainer/post-attach.sh"
+    "postAttachCommand": "/bin/bash ./.devcontainer/post-attach.sh",
+    "postStartCommand": "/bin/bash ./.devcontainer/post-start.sh"
  }
